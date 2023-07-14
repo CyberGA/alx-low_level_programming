@@ -19,10 +19,11 @@ int main(void)
 				putchar(' ');
 				putchar((inside_num / 10) + 48);
 				putchar((inside_num % 10) + 48);
-				if (num != 98 || j != 99)
+				if (num != 98 || inside_num != 99)
 				{
 					putchar(',');
 					putchar(' ');
+				}
 			}
 		}
 	}
