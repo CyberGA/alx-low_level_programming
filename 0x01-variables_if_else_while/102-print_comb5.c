@@ -6,19 +6,23 @@
  */
 int main(void)
 {
-	int num;
-	int inside_num;
+	int num, inside_num;
 
-	for (num = 0; num <= 9; ++num)
+	for (num = 0; num <= 99; num++)
 	{
-		for (inside_num = 0; inside_num <= 9; ++inside_num)
+		for (inside_num = 0; inside_num <= 99; inside_num++)
 		{
-			putchar(num + '0');
-			putchar(inside_num + '0');
-			if (num != 99)
+			if (num < inside_num)
 			{
-				putchar(',');
+				putchar((num / 10) + 48);
+				putchar((num % 10) + 48);
 				putchar(' ');
+				putchar((inside_num / 10) + 48);
+				putchar((inside_num % 10) + 48);
+				if (num != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
 			}
 		}
 	}
