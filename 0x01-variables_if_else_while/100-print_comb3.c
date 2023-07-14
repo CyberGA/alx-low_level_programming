@@ -15,7 +15,6 @@ int main(void)
 		{
 			putchar(num + '0');
 			putchar(inside_num + '0');
-		
 			if (num != 8)
 			{
 				putchar(',');
