@@ -17,7 +17,7 @@ int main(void)
 			for (inner_num = inside_num + 1; inner_num <= 9; inner_num++)
 			{
 				putchar(num + '0');
-		                putchar(inside_num + '0');
+				putchar(inside_num + '0');
 				putchar(inner_num + '0');
 				if (num != 7)
 				{
