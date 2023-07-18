@@ -2,7 +2,7 @@
 
 /**
  * _abs - computes the absolute value of an integer
- * @n - value to computer
+ * @n: value to computer
  * made by Gbenga Etomu
  *
  * Return: int
