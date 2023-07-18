@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * print_to_98 - prints from any numbeer to 98
@@ -7,29 +7,27 @@
  */
 void print_to_98(int n)
 {
+	int i, j;
+
 	if (n >= 98)
 	{
-		while (n >= 98)
+		for (i = n; i >= 98; i--)
 		{
-			_putchar(n + '0');
-			if (n != 98)
+			printf("%d", i);
+			if (i != 98)
 			{
-				_putchar(',');
-				_putchar(' ');
+				printf(", ");
 			}
-			n--;
 		}
 	}
 	else
-		while (n <= 98)
+		for (j = n; j <= 98; j++)
 		{
-			_putchar(n + '0');
-			if (n != 98)
+			printf("%d", j);
+			if (j != 98)
 			{
-				_putchar(',');
-				_putchar(' ');
+				printf(", ");
 			}
-			n++;
 		}
-	_putchar('\n');
+	printf("\n");
 }
