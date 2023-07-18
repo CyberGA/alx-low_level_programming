@@ -18,4 +18,5 @@ int main(void)
 		k = next;
 	}
 	printf("%lu", sum);
+	return (0);
 }
