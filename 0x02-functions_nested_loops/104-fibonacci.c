@@ -7,14 +7,14 @@
  */
 int main(void)
 {
-	int i = 0;
+	int i = 1;
 	unsigned long fib1 = 0, fib2 = 1, sum;
 
-	while (i < 98)
+	while (i <= 98)
 	{
 		sum = fib1 + fib2;
 		printf("%lu", sum);
-		if (i < 97)
+		if (i != 98)
 			printf(", ");
 		fib1 = fib2;
 		fib2 = sum;
