@@ -10,14 +10,14 @@ int main(void)
 	int i = 1;
 	unsigned long fib1 = 1, fib2 = 2, sum, j1, j2, k1, k2;
 
-	printf("%lu, %lu", fib1, fib2);
+	printf("%lu", fib1);
 	while (i < 91)
 	{
 		sum = fib1 + fib2;
-		printf(", %lu", sum);
+		printf(", %lu", fib2);
 
-		fib1 = fib2;
-		fib2 = sum;
+		fib2 += fib1;
+		fib1 = fib2 - fib1;
 		i++;
 	}
 	j1 = fib1 / 1000000000;
