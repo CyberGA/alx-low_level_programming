@@ -11,6 +11,7 @@
 char *_strchr(char *s, char c)
 {
 	int i;
+	char *f = NULL;
 
 	while (1)
 	{
@@ -21,5 +22,5 @@ char *_strchr(char *s, char c)
 	}
 
 	if (i == 0)
-		return (NULL);
+		return (f);
 }
