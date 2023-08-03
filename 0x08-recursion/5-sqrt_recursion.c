@@ -1,5 +1,6 @@
 #include "main.h"
 
+int sqrt_recursion(int, int);
 /**
  * _sqrt_recursion - cal. naturel squre root
  * @n: number
@@ -26,5 +27,5 @@ int sqrt_recursion(int n, int i)
 		return (-1);
 	if (i * i == n)
 		return (i);
-	return (actual_sqrt_recursion(n, i + 1));
+	return (sqrt_recursion(n, i + 1));
 }
