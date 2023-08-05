@@ -48,14 +48,22 @@ int computeChange(int num)
  */
 int main(int argc, char *argv[])
 {
+	int i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	if (atoi(argv[1]) < 0)
-		printf("0\n");
+	for (i = 0; argv[1][i] != '\0'; i++)
+	{
+		if (argv[1][i] < '0' || argv[1][i] > '9')
+		{
+			printf("0\n");
+			return (0);
+		}
+	}
 
 	printf("%d\n", computeChange(atoi(argv[1])));
 	return (0);
