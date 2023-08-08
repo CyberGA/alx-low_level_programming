@@ -30,10 +30,16 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	for (i = 0; i < s1_len; i++)
+	{
+		if (s1 == NULL)
+			break;
 		res[i] = s1[i];
+	}
 
 	for (j = 0; j < s2_len; j++)
 	{
+		if (s2 == NULL)
+			break;
 		res[i] = s2[j];
 		i++;
 	}
