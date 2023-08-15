@@ -1,6 +1,6 @@
 #ifndef CALCULATE_ABSOLUTE
 #define CALCULATE_ABSOLUTE
 
-#define ABS(x) ((x) < 0 ? (-x) : (x))
+#define ABS(x) ((x) < 0 ? -(x) : (x))
 
-#endif /* macro ABS */
+#endif /* macro CALCULATE_ABSOLUTE */
