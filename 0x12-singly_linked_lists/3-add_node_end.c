@@ -1,16 +1,17 @@
 #include "lists.h"
 
 /**
- * add_end - new node at the end
- * of a list_t list
- * @head: head
+ * add_node_end - adds a new node at the end of a list_t list
+ * @head: head of list
  * @str:  string
- * Return: linked list
+ * Return: node
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
 	unsigned int len = 0;
-	list_t *new;
+	list_t *new, *ptr;
+
+	ptr = *head;
 
 	while (str[len])
 		len++;
@@ -22,7 +23,16 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->str = strdup(str);
 	new->len = len;
 	new->next = NULL;
-	(*head)->next = new;
+
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
+
+	while (ptr->next != NULL)
+		ptr = ptr->next;
+	ptr->next = new;
 
 	return (new);
 }
