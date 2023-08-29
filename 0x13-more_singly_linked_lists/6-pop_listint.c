@@ -5,7 +5,7 @@
  * @head: address of the head node
  * Return: head node data
  */
-int pop_listint(listint_t **head);
+int pop_listint(listint_t **head)
 {
 	int data;
 	listint_t *temp;
@@ -14,7 +14,7 @@ int pop_listint(listint_t **head);
 		return (0);
 
 	data = (*head)->n;
-	temp = (*head)->next
+	temp = (*head)->next;
 	free(*head);
 	(*head) = temp;
 
