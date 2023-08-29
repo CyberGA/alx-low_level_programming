@@ -7,12 +7,11 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	const listint_t *temp = *h, *prev;
+	listint_t *temp = *h, *prev;
 	size_t count = 0, i;
 
 	while (temp)
 	{
-		printf("[%p] %d\n", (void *)temp, temp->n);
 		temp = temp->next;
 		count++;
 		prev = *h;
@@ -22,15 +21,14 @@ size_t free_listint_safe(listint_t **h)
 		{
 			if (temp == prev)
 			{
-				printf("-> [%p] %d\n", (void *)temp, temp->n);
+				free(*h);
+				*h = NULL;
 				return (count);
 			}
 			i++;
 			prev = prev->next;
 		}
-
-		if (*h == NULL)
-			exit(98);
 	}
+	*h = NULL;
 	return (count);
 }
