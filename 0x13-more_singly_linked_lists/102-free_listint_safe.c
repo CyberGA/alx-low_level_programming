@@ -15,7 +15,7 @@ size_t free_listint_safe(listint_t **h)
 		printf("[%p] %d\n", (void *)temp, temp->n);
 		temp = temp->next;
 		count++;
-		prev = *head;
+		prev = *h;
 		i = 0;
 
 		while (i < count)
@@ -29,7 +29,7 @@ size_t free_listint_safe(listint_t **h)
 			prev = prev->next;
 		}
 
-		if (head == NULL)
+		if (*h == NULL)
 			exit(98);
 	}
 	return (count);
