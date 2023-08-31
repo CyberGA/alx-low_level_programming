@@ -1,23 +1,25 @@
 #include "main.h"
 
 /**
- * set_bit - set value of a bit at a given index
+ * clear_bit - sets the value of a bit to 0 at a given index
  * @n: decimal
  * @index: index of specific bit
- * Return: integer
+ * Return: 1 if success, -1 if error
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int num;
+	unsigned long int i;
+	unsigned int hold;
 
 	if (index > 64)
 		return (-1);
 
-	for (num = 1; index > 0; index--, num *= 2)
+	for (i = 1; hold > 0; i *= 2, hold--)
 	{
 	}
 
-	*n *= num;
+	if ((*n >> index) * 1)
+		*n -= i;
 
 	return (1);
 }
