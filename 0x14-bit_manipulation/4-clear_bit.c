@@ -6,7 +6,7 @@
  * @index: index of specific bit
  * Return: 1 if success, -1 if error
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int i;
 	unsigned int hold;
